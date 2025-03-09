@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quién quiere ser millonario</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            padding-top: 50px;
+        }
+        .question-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .answer-btn {
+            margin-top: 10px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Quién quiere ser millonario</h1>
+        <div id="question-container" class="question-container">
+            <!-- Pregunta y opciones se generarán dinámicamente aquí -->
+        </div>
+    </div>
+
+    <script>
+        const questions = [
+            {
+                question: "¿Cuál es la capital de Francia?",
+                answers: ["París", "Londres", "Roma", "Berlín"],
+                correct: 0
+            },
+            {
+                question: "¿Cuál es la fórmula química del agua?",
+                answers: ["H2O", "CO2", "NaCl", "O2"],
+                correct: 0
+            },
+            // Agrega más preguntas aquí
+        ];
+
+        let currentQuestionIndex = 0;
+
+        function loadQuestion() {
+            const questionContainer = document.getElementById('question-container');
+            const questionData = questions[currentQuestionIndex];
+
+            questionContainer.innerHTML = `
+                <h2>${questionData.question}</h2>
+                ${questionData.answers.map((answer, index) => `
+                    <button class="btn btn-primary answer-btn" onclick="checkAnswer(${index})">${answer}</button>
+                `).join('')}
+            `;
+        }
+
+        function checkAnswer(selectedIndex) {
+            const questionData = questions[currentQuestionIndex];
+            if (selectedIndex === questionData.correct) {
+                alert("¡Correcto!");
+            } else {
+                alert("Incorrecto. La respuesta correcta era: " + questionData.answers[questionData.correct]);
+            }
+            currentQuestionIndex++;
+            if (currentQuestionIndex < questions.length) {
+                loadQuestion();
+            } else {
+                alert("¡Felicidades! Has completado el juego.");
+            }
+        }
+
+        loadQuestion();
+    </script>
+</body>
+</html>
