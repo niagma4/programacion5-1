@@ -4,6 +4,4 @@ Pagina creada con Bootstrap para el curso de Programacion 5 en la universidad An
 ---
 ### Integrantes
 * Nicolas Agudelo Martinez
-* Diana Carolina Dorado
 * Sebastian Ruiz Vargas
-* Junior Asto
