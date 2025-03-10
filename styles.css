@@ -1,0 +1,140 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.index-header {
+    text-align: center;
+}
+
+.card-img-top {
+    cursor: pointer;
+}
+
+/* Piedra, Papel o Tijeras Styles */
+.ppt-body {
+    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdLEF28m_9zaM48W8q8L3CiGAKr69TFxsb0g&s') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.ppt-game-container {
+    text-align: center;
+    margin-top: 50px;
+    background-color: rgba(110, 61, 112, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.choice-btn {
+    margin: 10px;
+    width: 100px;
+    font-size: 1.2em;
+}
+
+.choice-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin: 10px;
+}
+
+.result-container {
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.choices-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.choice {
+    margin: 20px;
+}
+
+.result-img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin: 0 10px;
+}
+
+.win-message {
+    color: green;
+    font-size: 2em;
+    font-weight: bold;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Quién quiere ser millonario Styles */
+.qqsm-body {
+    background-size: cover;
+}
+
+.qqsm-game-container {
+    text-align: center;
+    margin-top: 50px;
+    background-color: rgba(92, 30, 87, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+.question-container {
+    margin-top: 20px;
+}
+
+.answer-btn {
+    margin-top: 10px;
+    width: 100%;
+    font-size: 1.2em;
+    background-color: #6f42c1; 
+    border-color: #6f42c1;
+}
+
+.money {
+    margin-top: 20px;
+    font-size: 2.5em;
+    color: #28a745;
+    font-weight: bold;
+}
+
+/* Reseñas Styles */
+.review-container {
+    margin-top: 50px;
+}
+
+.review {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.star-rating {
+    color: #ffc107;
+}
